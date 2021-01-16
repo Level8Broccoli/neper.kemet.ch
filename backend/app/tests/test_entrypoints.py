@@ -14,3 +14,4 @@ def test_root():
 def test_get_all_items():
     response = client.get("/items")
     assert response.status_code == 200
+    assert response.json() == []
