@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from typing import List
 
-from models.item import Item
+from schemas.item import Item
 
 router = APIRouter(
     prefix="/items",
