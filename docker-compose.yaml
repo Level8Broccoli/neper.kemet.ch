@@ -8,3 +8,11 @@ services:
       - ./backend/app:/app
     ports:
       - 80:80
+    depends_on:
+      - test
+  test:
+    build: ./backend
+    container_name: test
+    volumes:
+      - ./backend/app:/app
+    command: pytest
