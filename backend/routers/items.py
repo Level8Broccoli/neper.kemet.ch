@@ -12,3 +12,8 @@ router = APIRouter(
 @router.get("/", response_model=List[Item])
 def get_all_items():
     return []
+
+
+@router.post("/")
+def create_new_item():
+    return ""
