@@ -7,7 +7,5 @@ services:
       context: ./backend/
       dockerfile: ./docker/prod/Dockerfile
     container_name: backend
-    volumes:
-      - ./storage/:/app/storage/db
     ports:
       - 80:80
