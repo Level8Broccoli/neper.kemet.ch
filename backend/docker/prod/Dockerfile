@@ -18,9 +18,9 @@ COPY . .
 RUN python -m pip install -r requirements.txt
 
 # Run all tests
-# RUN pytest
+RUN python -m pytest
 
 # Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
-# RUN adduser --system --group $USER
-# RUN chown -R $USER:$USER $WORKDIR
-# USER $USER
+RUN adduser --system --group $USER
+RUN chown -R $USER:$USER $WORKDIR
+USER $USER
