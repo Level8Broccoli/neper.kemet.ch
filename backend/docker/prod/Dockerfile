@@ -12,10 +12,9 @@ ENV PYTHONUNBUFFERED=1
 RUN mkdir $WORKDIR
 WORKDIR $WORKDIR
 
-# Install pip requirements
-RUN pip install --upgrade pip
+# Install pip requirements and general setup
 COPY . .
-RUN python -m pip install -r requirements.txt
+RUN chmod +x ./setup.sh && ./setup.sh
 
 # Run all tests
 RUN python -m pytest
