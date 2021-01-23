@@ -1,9 +1,9 @@
 from fastapi.testclient import TestClient
 
 from schemas.item import Item
-from main import app
+from main import api
 
-client = TestClient(app)
+client = TestClient(api)
 
 
 def test_root():
