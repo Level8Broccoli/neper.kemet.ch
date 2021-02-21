@@ -2,10 +2,10 @@ from fastapi import FastAPI
 
 from routers import items
 
-api = FastAPI()
-api.include_router(items.router)
+app = FastAPI()
+app.include_router(items.router)
 
 
-@api.get("/")
+@app.get("/")
 def get_root():
     return {"Version": "0.0.0"}

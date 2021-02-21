@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  backend:
+    image: neper:backend
+    build:
+      context: ./backend/
+      dockerfile: ./docker/dev/Dockerfile
+    container_name: backend
+    volumes:
+      - ./backend/:/usr/src/app
+    ports:
+      - 80:8080

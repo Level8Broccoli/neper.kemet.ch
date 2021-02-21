@@ -1,9 +1,8 @@
 from fastapi.testclient import TestClient
 
-# from schemas.item import Item
-from main import api
+from main import app
 
-client = TestClient(api)
+client = TestClient(app)
 
 
 def test_root():
@@ -16,9 +15,3 @@ def test_get_all_items():
     response = client.get("/items/")
     assert response.status_code == 200
     assert response.json() == []
-
-
-# def test_add_item():
-#     item = Item(name="Name", description="Description")
-#     response = client.post("/items/", data=item)
-#     assert response.status_code == 201
