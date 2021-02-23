@@ -1,6 +1,6 @@
 FROM tiangolo/uvicorn-gunicorn:python3.8
 
-ENV WORKDIR=/usr/src/app
+ENV WORKDIR=/app
 ENV USER=app
 ENV PORT=8080
 ENV VARIABLE_NAME=app
@@ -12,7 +12,6 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 # Setup workdir
-RUN mkdir $WORKDIR
 WORKDIR $WORKDIR
 
 # Install pip requirements and general setup
