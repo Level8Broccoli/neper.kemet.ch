@@ -1,11 +1,10 @@
 from fastapi import FastAPI
 
-from routers import items
+from routers import item_router
 
 app = FastAPI()
-app.include_router(items.router)
-
+app.include_router(item_router.router)
 
 @app.get("/")
-def get_root():
-    return {"Version": "0.0.0"}
+def get_status():
+    return {"Status": "online"}
