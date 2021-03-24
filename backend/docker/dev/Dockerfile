@@ -13,7 +13,3 @@ ENV PYTHONUNBUFFERED=1
 
 # Setup workdir
 WORKDIR $WORKDIR
-
-# Install pip requirements and general setup
-COPY . .
-RUN chmod +x ./setup.sh && ./setup.sh
