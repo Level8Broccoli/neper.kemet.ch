@@ -5,6 +5,8 @@ ENV PYTHONDONTWRITEBYTECODE=1
 
 RUN apk add --update --no-cache\
   git\
+  nodejs\
+  npm\
   python3\
   && python3 -m ensurepip\
   && ln -sf python3 /usr/bin/python\
