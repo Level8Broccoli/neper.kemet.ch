@@ -6,17 +6,22 @@ An auction website for second hand (board) games.
 
 Neper is a god of grain in ancient Egyptian mythology.
 
-## Developing
+## Development
 
 ### Prerequisites
 
 * Docker
-* Docker-Compose
 * Visual Studio Code
 * Remote - Containers
 
-### Start developing container
+### Developing container with Visual Studio Code
 
 ```
 VSC > Remote-Containers: Reopen in Container
 ```
+
+## Tests
+
+### Prerequisites
+
+* Docker
