@@ -6,4 +6,7 @@
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/ash"
 	},
+	"extensions": [
+		"ms-python.python"
+	],
 }
