@@ -7,6 +7,7 @@
 		"terminal.integrated.shell.linux": "/bin/ash"
 	},
 	"extensions": [
-		"ms-python.python"
+		"ms-python.python",
+		"esbenp.prettier-vscode"
 	],
 }
