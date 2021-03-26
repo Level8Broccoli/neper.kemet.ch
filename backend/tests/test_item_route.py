@@ -4,13 +4,19 @@ from main import app
 
 client = TestClient(app)
 
-items_path = '/items/'
+items_path = '/items'
 
 
 def test_get_all_items():
     response = client.get(items_path)
     assert response.status_code == 200
     assert len(response.json()) == 2
+
+
+def test_get_item():
+    response = client.get(f'{items_path}/1')
+    assert response.status_code == 200
+    assert response.json()['id'] == 1
 
 
 def test_add_item():
@@ -21,4 +27,4 @@ def test_add_item():
 
     response = client.post(items_path, json=new_item)
     assert response.status_code == 201
-    assert response.json() == new_item
+    assert response.json() == {**new_item, 'id':  2}
