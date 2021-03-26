@@ -1,1 +1,13 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# Frontend
+
+## Install dependencies
+
+```
+$ npm install
+```
+
+## Start development server
+
+```
+$ npm run dev
+```
