@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  ci:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.ci
+    container_name: neper-ci
+    volumes:
+      - ./:/data

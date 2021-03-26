@@ -9,7 +9,7 @@ export default function Home({ data }) {
           <li key={item.id}>
             <h2>{item.title}</h2>
             <p>{item.description}</p>
-            <Link href={"/" + String(item.id)}>
+            <Link href={'/' + String(item.id)}>
               <a>Zur Item-Seite</a>
             </Link>
           </li>
@@ -20,7 +20,7 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch("http://localhost:8000/items");
+  const res = await fetch('http://localhost:8000/items');
   const data = await res.json();
 
   if (!data) {
