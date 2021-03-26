@@ -5,7 +5,4 @@ backend-check:
 	pytest
 
 frontend-check:
-	mypy **/*.py
-	bandit **/*.py
-	prospector --strictness high **/*.py
-	pytest
+	eslint .

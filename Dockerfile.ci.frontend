@@ -1,0 +1,13 @@
+FROM alpine:3
+
+RUN apk add --update --no-cache\
+    make\
+    nodejs\
+    yarn
+
+RUN yarn global add eslint
+
+WORKDIR /data
+
+ENTRYPOINT ["make"]
+CMD ["frontend-check"]
