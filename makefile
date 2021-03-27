@@ -26,4 +26,5 @@ frontend-install-dependencies: ./frontend/package.json
 	touch frontend-install-dependencies
 
 frontend-check: frontend-install-dependencies
+	pwd
 	eslint .
