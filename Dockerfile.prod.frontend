@@ -1,0 +1,17 @@
+FROM node:alpine AS deps
+WORKDIR /app
+COPY ./frontend/package.json ./frontend/yarn.lock ./
+RUN yarn install --frozen-lockfile
+
+FROM node:alpine AS builder
+WORKDIR /app
+COPY ./frontend .
+COPY --from=deps /app/node_modules ./node_modules
+ENV API_HOST='https://neper.kemet.ch/api'
+RUN yarn build
+
+FROM nginx:alpine AS server
+WORKDIR /usr/share/nginx/html
+
+COPY --from=builder /app/out ./public
+COPY --from=builder /app/.next ./.next

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Home({ data }) {
   return (
@@ -20,7 +20,8 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch('http://localhost:8000/items');
+  const host = process.env.API_HOST || 'http://localhost:8000';
+  const res = await fetch(`${host}/items`);
   const data = await res.json();
 
   if (!data) {

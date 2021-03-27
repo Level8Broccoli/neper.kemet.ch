@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Item({ item }) {
   return (
@@ -12,7 +12,8 @@ export default function Item({ item }) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:8000/items");
+  const host = process.env.API_HOST || 'http://localhost:8000';
+  const res = await fetch(`${host}/items`);
   const items = await res.json();
 
   const paths = items.map((item) => ({
@@ -23,7 +24,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(`http://localhost:8000/items/${params.id}`);
+  const host = process.env.API_HOST || 'http://localhost:8000';
+  const res = await fetch(`${host}/items/${params.id}`);
   const item = await res.json();
 
   // Pass post data to the page via props
