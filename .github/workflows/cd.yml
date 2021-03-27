@@ -20,7 +20,7 @@ jobs:
           ssh_public_key: ${{ secrets.DOCKER_SSH_PUBLIC_KEY }}
           remote_docker_port: ${{ secrets.DOCKER_PORT }}
           stack_file_name: docker-compose.prod.yml
-          args: up -d backend
+          args: up -d --build backend
 
   deploy-frontend:
     runs-on: ubuntu-latest
@@ -36,4 +36,4 @@ jobs:
           ssh_public_key: ${{ secrets.DOCKER_SSH_PUBLIC_KEY }}
           remote_docker_port: ${{ secrets.DOCKER_PORT }}
           stack_file_name: docker-compose.prod.yml
-          args: up -d frontend
+          args: up -d --build frontend
