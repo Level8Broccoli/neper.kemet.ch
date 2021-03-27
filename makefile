@@ -21,5 +21,9 @@ docker-frontend-image: Dockerfile.ci.frontend
 	docker build -t frontend-check -f Dockerfile.ci.frontend .
 	touch docker-frontend-image
 
-frontend-check:
+frontend-install-dependencies: ./frontend/package.json
+	cd ./frontend && yarn install
+	touch frontend-install-dependencies
+
+frontend-check: frontend-install-dependencies
 	eslint .
