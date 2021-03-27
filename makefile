@@ -26,6 +26,5 @@ frontend-install-dependencies: ./frontend/package.json
 	touch frontend-install-dependencies
 
 frontend-check: frontend-install-dependencies
-	pwd
-	yarn lint
-	eslint .
+	cd ./frontend && yarn lint
+	cd ./frontend && eslint .
