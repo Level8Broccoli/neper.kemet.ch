@@ -12,5 +12,4 @@ RUN yarn build
 
 FROM nginx:alpine AS server
 WORKDIR /usr/share/nginx/html
-
 COPY --from=builder /app/out .

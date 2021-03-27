@@ -15,6 +15,10 @@ db = [
         'id': 1,
         'title': 'Item 1',
         'description': 'Kurze Beschreibung zum Item Nr. 1',
+    }, {
+        'id': 2,
+        'title': 'Item 2',
+        'description': 'Kurze Beschreibung zum Item Nr. 2',
     }
 ]
 

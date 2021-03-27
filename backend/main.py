@@ -8,4 +8,4 @@ app.include_router(items.router)
 
 @app.get('/', tags=['root'])
 async def index(request: Request):
-    return {'status': 'online', 'version': '1'}
+    return {'status': 'online', 'version': '2'}
