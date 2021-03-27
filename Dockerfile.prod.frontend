@@ -8,7 +8,6 @@ WORKDIR /app
 COPY ./frontend .
 COPY --from=deps /app/node_modules ./node_modules
 ENV API_HOST='https://neper.kemet.ch/api'
-ARG CACHEBUST=1
 RUN yarn build
 
 FROM nginx:alpine AS server
