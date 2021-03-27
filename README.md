@@ -20,8 +20,21 @@ Neper is a god of grain in ancient Egyptian mythology.
 VSC > Remote-Containers: Reopen in Container
 ```
 
-## Tests
+## CI
 
 ### Prerequisites
 
 * Docker
+* make
+
+### Start frontend CI
+
+```sh
+make docker-frontend-run
+```
+
+### Start backend CI
+
+```sh
+make docker-backend-run
+```

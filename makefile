@@ -27,3 +27,6 @@ frontend-install-dependencies: ./frontend/package.json
 
 frontend-check: frontend-install-dependencies
 	cd ./frontend && yarn lint
+
+clean:
+	rm -rf docker-python-image .mypy_cache
