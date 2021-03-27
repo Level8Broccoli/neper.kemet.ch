@@ -27,4 +27,5 @@ frontend-install-dependencies: ./frontend/package.json
 
 frontend-check: frontend-install-dependencies
 	pwd
+	yarn lint
 	eslint .
