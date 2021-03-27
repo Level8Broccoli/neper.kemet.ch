@@ -5,9 +5,11 @@ RUN apk add --update --no-cache\
     nodejs\
     yarn
 
-RUN yarn global add eslint
-
 WORKDIR /data
+
+COPY ./frontend/package.json ./frontend/package.json
+
+RUN cd ./frontend && yarn install
 
 ENTRYPOINT ["make"]
 CMD ["frontend-check"]
