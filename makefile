@@ -27,4 +27,3 @@ frontend-install-dependencies: ./frontend/package.json
 
 frontend-check: frontend-install-dependencies
 	cd ./frontend && yarn lint
-	cd ./frontend && eslint .
