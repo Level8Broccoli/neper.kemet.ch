@@ -8,6 +8,7 @@ WORKDIR /app
 COPY ./frontend .
 COPY --from=deps /app/node_modules ./node_modules
 ENV API_HOST='https://neper.kemet.ch/api'
+RUN wget ${API_HOST}/items/ -O dependency.json
 RUN yarn build
 
 FROM nginx:alpine AS server
