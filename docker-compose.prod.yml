@@ -9,11 +9,11 @@ services:
       dockerfile: Dockerfile.prod.backend
     ports:
       - 4040:80
-  frontend:
+  admin:
     restart: always
-    container_name: neper-frontend
+    container_name: neper-admin
     build:
       context: .
-      dockerfile: Dockerfile.prod.frontend
+      dockerfile: Dockerfile.prod.admin
     ports:
       - 4000:80

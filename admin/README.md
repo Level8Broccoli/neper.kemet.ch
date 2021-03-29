@@ -1,4 +1,4 @@
-# Frontend
+# Admin
 
 ***node_modules folder is placed in the root directory and linked via soft link!***
 

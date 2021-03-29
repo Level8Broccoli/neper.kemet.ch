@@ -14,19 +14,19 @@ backend-check:
 	prospector --strictness high **/*.py
 	pytest
 
-docker-frontend-run: docker-frontend-image
-	docker run -v $$PWD:/data -u ${UID}:${GID} frontend-check
+docker-admin-run: docker-admin-image
+	docker run -v $$PWD:/data -u ${UID}:${GID} admin-check
 
-docker-frontend-image: Dockerfile.ci.frontend
-	docker build -t frontend-check -f Dockerfile.ci.frontend .
-	touch docker-frontend-image
+docker-admin-image: Dockerfile.ci.admin
+	docker build -t admin-check -f Dockerfile.ci.admin .
+	touch docker-admin-image
 
-frontend-install-dependencies: ./frontend/package.json
-	cd ./frontend && yarn install
-	touch frontend-install-dependencies
+admin-install-dependencies: ./admin/package.json
+	cd ./admin && yarn install
+	touch admin-install-dependencies
 
-frontend-check: frontend-install-dependencies
-	cd ./frontend && yarn lint
+admin-check: admin-install-dependencies
+	cd ./admin && yarn lint
 
 clean:
-	rm -rf docker-backend-image frontend-install-dependencies docker-frontend-image .mypy_cache
+	rm -rf docker-backend-image admin-install-dependencies docker-admin-image .mypy_cache

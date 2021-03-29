@@ -27,10 +27,10 @@ VSC > Remote-Containers: Reopen in Container
 * Docker
 * make
 
-### Start frontend CI
+### Start admin CI
 
 ```sh
-make docker-frontend-run
+make docker-admin-run
 ```
 
 ### Start backend CI

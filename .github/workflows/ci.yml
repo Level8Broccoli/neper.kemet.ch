@@ -16,10 +16,10 @@ jobs:
       - name: Run CI
         run: make docker-backend-run
 
-  ci-frontend:
+  ci-admin:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
       - name: Run CI
-        run: make docker-frontend-run
+        run: make docker-admin-run

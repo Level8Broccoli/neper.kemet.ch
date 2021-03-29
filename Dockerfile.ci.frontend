@@ -8,4 +8,4 @@ RUN apk add --update --no-cache\
 WORKDIR /data
 
 ENTRYPOINT ["make"]
-CMD ["frontend-check"]
+CMD ["admin-check"]
