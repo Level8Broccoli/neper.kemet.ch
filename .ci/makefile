@@ -5,8 +5,8 @@ PROJECT_ROOT := $(shell cd .. && pwd)
 docker-backend-run: docker-backend-image
 	docker run -v ${PROJECT_ROOT}:/data -u ${UID}:${GID} backend-check
 
-docker-backend-image: Dockerfile.ci.backend
-	docker build -t backend-check -f ./.ci/Dockerfile.ci.backend ..
+docker-backend-image: ${PROJECT_ROOT}/.ci/Dockerfile.ci.backend
+	docker build -t backend-check -f ${PROJECT_ROOT}/.ci/Dockerfile.ci.backend ${PROJECT_ROOT}
 	touch docker-backend-image
 
 backend-check:
@@ -18,11 +18,11 @@ backend-check:
 docker-admin-run: docker-admin-image
 	docker run -v ${PROJECT_ROOT}:/data -u ${UID}:${GID} admin-check
 
-docker-admin-image: Dockerfile.ci.admin
-	docker build -t admin-check -f ./.ci/Dockerfile.ci.admin ..
+docker-admin-image: ${PROJECT_ROOT}/.ci/Dockerfile.ci.admin
+	docker build -t admin-check -f ${PROJECT_ROOT}/.ci/Dockerfile.ci.admin ${PROJECT_ROOT}
 	touch docker-admin-image
 
-admin-install-dependencies: ../admin/package.json
+admin-install-dependencies: ${PROJECT_ROOT}/admin/package.json
 	cd ${PROJECT_ROOT}/admin && yarn install
 	touch admin-install-dependencies
 
