@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run CI
-        run: cd ./.ci && make docker-backend-run
+        run: make --directory=./.ci docker-backend-run
 
   ci-admin:
     runs-on: ubuntu-latest
@@ -22,4 +22,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run CI
-        run: cd ./.ci && make docker-admin-run
+        run: make --directory=./.ci docker-admin-run

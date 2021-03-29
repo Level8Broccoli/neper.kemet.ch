@@ -21,4 +21,4 @@ RUN pip3 install -r /requirements.txt
 WORKDIR /data
 
 ENTRYPOINT ["make"]
-CMD ["backend-check"]
+CMD ["--directory=./.ci", "backend-check"]
