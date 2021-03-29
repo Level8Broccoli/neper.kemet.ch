@@ -1,7 +1,7 @@
 {
 	"name": "Neper",
 	"build": {
-		"dockerfile": "../Dockerfile.dev",
+		"dockerfile": "./Dockerfile.dev",
 	},
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/ash"

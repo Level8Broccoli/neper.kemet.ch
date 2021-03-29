@@ -5,15 +5,15 @@ services:
     restart: always
     container_name: neper-backend
     build:
-      context: .
-      dockerfile: Dockerfile.prod.backend
+      context: ..
+      dockerfile: ./.cd/Dockerfile.prod.backend
     ports:
       - 4040:80
   admin:
     restart: always
     container_name: neper-admin
     build:
-      context: .
-      dockerfile: Dockerfile.prod.admin
+      context: ..
+      dockerfile: ./.cd/Dockerfile.prod.admin
     ports:
       - 4000:80
