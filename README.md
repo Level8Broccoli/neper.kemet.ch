@@ -38,3 +38,14 @@ make docker-frontend-run
 ```sh
 make docker-backend-run
 ```
+
+## Deployment
+
+### Prerequisites
+
+* Docker
+* Docker Compose
+
+```sh
+DOCKER_HOST="ssh://user@host" docker-compose -f docker-compose.prod.yml up -d
+```

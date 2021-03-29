@@ -29,4 +29,4 @@ frontend-check: frontend-install-dependencies
 	cd ./frontend && yarn lint
 
 clean:
-	rm -rf docker-python-image .mypy_cache
+	rm -rf docker-backend-image frontend-install-dependencies docker-frontend-image .mypy_cache
