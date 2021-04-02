@@ -12,7 +12,7 @@ Neper is a god of grain in ancient Egyptian mythology.
 
 * Docker
 * Visual Studio Code
-* Remote - Containers
+  * Remote - Containers
 
 ### Developing container with Visual Studio Code
 
