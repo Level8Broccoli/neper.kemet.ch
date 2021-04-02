@@ -18,9 +18,7 @@ Neper is a god of grain in ancient Egyptian mythology.
 
 Visual Studio Code `> Remote-Containers: Reopen in Container`
 
-## CI
-
-[![CI](https://github.com/Level8Broccoli/neper.kemet.ch/actions/workflows/ci.yml/badge.svg)](https://github.com/Level8Broccoli/neper.kemet.ch/actions/workflows/ci.yml)
+## CI [![CI](https://github.com/Level8Broccoli/neper.kemet.ch/actions/workflows/ci.yml/badge.svg)](https://github.com/Level8Broccoli/neper.kemet.ch/actions/workflows/ci.yml)
 
 ### Prerequisites
 
@@ -37,9 +35,7 @@ make --directory=./.ci ci-admin
 
 // TODO
 
-## CD
-
-[![CD](https://github.com/Level8Broccoli/neper.kemet.ch/actions/workflows/cd.yml/badge.svg)](https://github.com/Level8Broccoli/neper.kemet.ch/actions/workflows/cd.yml)
+## CD [![CD](https://github.com/Level8Broccoli/neper.kemet.ch/actions/workflows/cd.yml/badge.svg)](https://github.com/Level8Broccoli/neper.kemet.ch/actions/workflows/cd.yml)
 
 ### Prerequisites
 
