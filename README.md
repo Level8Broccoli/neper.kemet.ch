@@ -45,5 +45,5 @@ make --directory=./.ci ci-admin
 * Docker Compose
 
 ```sh
-DOCKER_HOST="ssh://user@host" docker-compose -f ./.cd/docker-compose.prod.yml up -d
+DOCKER_HOST="ssh://user@host" docker-compose -f ./.cd/docker-compose.prod.yml up -d --build
 ```
