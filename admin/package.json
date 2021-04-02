@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "lint": "eslint --fix .",
+    "lint:ci": "eslint .",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {

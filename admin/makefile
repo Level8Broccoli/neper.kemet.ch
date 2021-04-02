@@ -1,2 +1,2 @@
 run-admin-ci:
-	yarn lint
+	yarn lint:ci
