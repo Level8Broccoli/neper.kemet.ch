@@ -1,14 +1,6 @@
 version: "3"
 
 services:
-  backend:
-    restart: always
-    container_name: neper-backend
-    build:
-      context: ..
-      dockerfile: ./.cd/Dockerfile.prod.backend
-    ports:
-      - 4040:80
   admin:
     restart: always
     container_name: neper-admin
@@ -16,4 +8,4 @@ services:
       context: ..
       dockerfile: ./.cd/Dockerfile.prod.admin
     ports:
-      - 4000:80
+      - 4050:80

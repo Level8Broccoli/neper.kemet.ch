@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy-backend:
+  cd:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,20 +20,4 @@ jobs:
           ssh_public_key: ${{ secrets.DOCKER_SSH_PUBLIC_KEY }}
           remote_docker_port: ${{ secrets.DOCKER_PORT }}
           stack_file_name: ./.cd/docker-compose.prod.yml
-          args: up -d --build backend
-
-  deploy-admin:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: deploy
-        uses: wshihadeh/docker-deployment-action@v2
-        with:
-          remote_docker_host: ${{ secrets.DOCKER_HOST }}
-          ssh_private_key: ${{ secrets.DOCKER_SSH_PRIVATE_KEY }}
-          ssh_public_key: ${{ secrets.DOCKER_SSH_PUBLIC_KEY }}
-          remote_docker_port: ${{ secrets.DOCKER_PORT }}
-          stack_file_name: ./.cd/docker-compose.prod.yml
-          args: up -d --build admin
+          args: up -d

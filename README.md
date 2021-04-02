@@ -30,14 +30,12 @@ VSC > Remote-Containers: Reopen in Container
 ### Start admin CI
 
 ```sh
-make docker-admin-run
+make --directory=./.ci ci-admin
 ```
 
 ### Start backend CI
 
-```sh
-make docker-backend-run
-```
+// TODO
 
 ## Deployment
 
@@ -47,5 +45,5 @@ make docker-backend-run
 * Docker Compose
 
 ```sh
-DOCKER_HOST="ssh://user@host" docker-compose -f docker-compose.prod.yml up -d
+DOCKER_HOST="ssh://user@host" docker-compose -f ./.cd/docker-compose.prod.yml up -d
 ```
