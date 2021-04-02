@@ -37,7 +37,7 @@ make --directory=./.ci ci-admin
 
 // TODO
 
-## Deployment
+## CD
 
 ### Prerequisites
 
