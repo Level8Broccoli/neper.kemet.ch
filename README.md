@@ -20,6 +20,8 @@ Visual Studio Code `> Remote-Containers: Reopen in Container`
 
 ## CI
 
+[![CI](https://github.com/Level8Broccoli/neper.kemet.ch/actions/workflows/ci.yml/badge.svg)](https://github.com/Level8Broccoli/neper.kemet.ch/actions/workflows/ci.yml)
+
 ### Prerequisites
 
 * Docker
@@ -36,6 +38,8 @@ make --directory=./.ci ci-admin
 // TODO
 
 ## CD
+
+[![CD](https://github.com/Level8Broccoli/neper.kemet.ch/actions/workflows/cd.yml/badge.svg)](https://github.com/Level8Broccoli/neper.kemet.ch/actions/workflows/cd.yml)
 
 ### Prerequisites
 
