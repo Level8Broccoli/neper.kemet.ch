@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
+    "build": "next build && next export",
     "lint": "eslint --fix .",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
