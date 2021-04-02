@@ -3,7 +3,7 @@ export default function AdminHome() {
 
     return (
         <main>
-            <h1>Admin2</h1>
+            <h1>Admin</h1>
         </main>
     );
 }
