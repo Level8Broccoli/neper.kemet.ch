@@ -10,4 +10,4 @@ COPY ./admin .
 
 RUN yarn install --modules-folder ./node_modules
 
-CMD [ "yarn", "lint"]
+ENTRYPOINT ["make"]
