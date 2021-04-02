@@ -2,7 +2,7 @@ name: CD
 
 on:
   push:
-    branches: [ live ]
+    tags: [ v* ]
   workflow_dispatch:
 
 jobs:
