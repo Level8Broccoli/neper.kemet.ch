@@ -1,6 +1,4 @@
-export default function AdminHome() {
-    const re = 'ho';
-
+export default function AdminHome(): JSX.Element {
     return (
         <main>
             <h1>Admin</h1>
