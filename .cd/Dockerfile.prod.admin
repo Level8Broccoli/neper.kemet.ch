@@ -7,7 +7,6 @@ FROM node:alpine AS builder
 WORKDIR /app
 COPY ./admin .
 COPY --from=deps /app/node_modules ./node_modules
-ENV API_HOST='https://neper.kemet.ch/api'
 RUN yarn build
 
 FROM nginx:alpine AS server
