@@ -8,18 +8,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  ci-backend:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Run CI
-        run: make --directory=./.ci docker-backend-run
-
   ci-admin:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Run CI
-        run: make --directory=./.ci docker-admin-run
+      - name: Run CI for admin
+        run: make --directory=./.ci ci-admin
